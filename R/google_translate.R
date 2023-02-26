@@ -1,5 +1,20 @@
 
-
+#' Translate text using google translate
+#'
+#' @param text This is the text that you want to translate.
+#' @param target_language This is the language that you want to translate the text into.
+#' The default value for this argument is "en" for English.
+#' @param source_language This is the language of the text that you want to translate.
+#' The default value for this argument is "auto",
+#' which means that the function will try to automatically detect the language of the text.
+#'
+#' @return Translated text.
+#' @export
+#'
+#' @examples
+#'\donttest{
+#'google_translate("私は日本語が話せます。", target_language = "en")
+#'}
 
 google_translate <- function(text, target_language = "en", source_language = "auto") {
 
@@ -27,11 +42,3 @@ google_translate <- function(text, target_language = "en", source_language = "au
 }
 
 
-
-google_translate_list <- function(text_vector, target_lang) {
-  translated_vector <- character(length(text_vector))
-  for (i in seq_along(text_vector)) {
-    translated_vector[i] <- LinguaR::google_translate(text_vector[i], target_lang = target_lang)
-  }
-  return(translated_vector)
-}
