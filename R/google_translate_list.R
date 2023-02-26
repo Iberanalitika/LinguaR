@@ -13,6 +13,11 @@
 #'translate_text_vector(text_vector, "es")
 #'}
 
+.onLoad <- function(libname, pkgname) {
+  # Load required packages
+  library(dplyr)
+  library(urltools)
+}
 
 
 google_translate_list <- function(text_vector, target_lang) {

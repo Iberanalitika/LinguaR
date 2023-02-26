@@ -16,6 +16,12 @@
 #'google_translate("私は日本語が話せます。", target_language = "en")
 #'}
 
+.onLoad <- function(libname, pkgname) {
+  # Load required packages
+  library(dplyr)
+  library(urltools)
+}
+
 google_translate <- function(text, target_language = "en", source_language = "auto") {
 
 
