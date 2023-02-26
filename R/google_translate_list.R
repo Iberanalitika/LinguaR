@@ -20,7 +20,7 @@
 }
 
 
-google_translate_list <- function(text_vector, target_lang) {
+google_translate_list <- function(text_vector, target_lang = "en") {
   translated_vector <- character(length(text_vector))
   for (i in seq_along(text_vector)) {
     translated_vector[i] <- LinguaR::google_translate(text_vector[i], target_lang = target_lang)
