@@ -37,7 +37,7 @@ LinguaR::google_dym(original_text = "I wld like to se the plantns in you garaden
 ```
 
 ``` r
-[1] "I would like to see the plants in you garden"
+[1] "I would like to see the plants in your garden"
 ```
 
 ## Installation
