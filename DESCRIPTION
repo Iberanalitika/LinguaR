@@ -11,4 +11,7 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   dplyr,
-  urltools
+  urltools,
+  rvest,
+  httr,
+  cld2
