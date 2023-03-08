@@ -1,0 +1,16 @@
+# Load the "eurostat" package
+library(eurostat)
+
+# Define the variables
+country <- "DE"
+indicator <- "icp.m.nohicp.00000000"
+time_period <- "2018M01:2022M12"
+
+# Query the data from Eurostat
+inflation_data <- get_eurostat(id = indicator, 
+                               filters = list(geo = country, time = time_period))
+
+get_eurostat()
+
+# Print the resulting data frame
+print(inflation_data)
